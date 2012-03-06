@@ -3,6 +3,15 @@
 import BeautifulSoup as BS
 import codecs
 
+card_type_list ={'Legendary'   :0x8000,
+                 'Tribal'      :0x4000,
+                 'Land'        :0x0800,
+                 'Creature'    :0x0400,
+                 'Enchantment' :0x0200,
+                 'Artifact'    :0x0100,
+                 'Instant'     :0x0080,
+                 'Sorcery'     :0x0040,
+                 'Planeswalker':0x0020}
 
 def card_type(typestring):
     """
@@ -10,11 +19,21 @@ def card_type(typestring):
     """
     delimiter = u'—'
     types = [t for t in typestring.split(delimiter)]
-    if len(types) == 1:
-        return types[0]
-    else:
-        mainType = types[0].strip().split(u' ')
-        subType = types[1].strip().split(u' ')
+    ret = {'mainType':0,
+           'subType':None}
+
+    subType = None
+    mainType = types[0].strip().split()
+
+    if len(types) == 2:
+        subType = types[1].strip().split()
+
+    for t in mainType:
+        ret['mainType'] += card_type_list[t]
+
+    ret['subType'] = subType
+
+    return ret
 
 def load_html(htmlfile):
     fileHandle = None
@@ -23,7 +42,7 @@ def load_html(htmlfile):
     except IOError:
         print "cannot open file : %s" % htmlfile
     else:
-        soup = BS.BeautifulSoup(fileHandle.read())
+        soup = BS.BeautifulSoup(fileHandle.read().decode('utf-8'))
         tr_tags = soup.findAll(u'tr')
         card_list = []
         card_data = {}
@@ -71,12 +90,21 @@ def output_list(ofilename, clist):
     else:
         for card in clist:
             for k,v in card.iteritems():
+
                 if k == "Name":
                     name = v.values()
                     txt = [k] + name
-                    fileHandle.write(u'%s %s / %s\n'%(txt[0],txt[2],txt[1]))
+                    fileHandle.write(u'%s: %s / %s\n'%(txt[0],txt[2],txt[1]))
+                elif k == "Type":
+ 
+                    types = card_type(v)
+                    fileHandle.write(u'mtype: %d\n'%types['mainType'])
+                    if types['subType']:
+                        fileHandle.write(u'subtype: {%s}\n'%u", ".join(types['subType']))
+                    else:
+                        fileHandle.write(u'subtype: null\n')
                 else:
-                    fileHandle.write(u'%s:%s\n'%(k,v))
+                    fileHandle.write(u'%s: %s\n'%(k,v))
             fileHandle.write(u'\n')
             
 def main():
