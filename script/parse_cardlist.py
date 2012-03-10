@@ -2,6 +2,8 @@
 # -*- coding:utf-8 -*-
 import BeautifulSoup as BS
 import codecs
+import re
+
 
 card_type_list ={'Legendary'   :0x8000,
                  'Tribal'      :0x4000,
@@ -104,6 +106,6 @@ def output_list(ofilename, clist):
             
 def main():
     clist = load_html("DKA.htm")
-    output_list("result.txt",clist)
+    output_list("result.yaml",clist)
 if __name__ == "__main__":
     main()
