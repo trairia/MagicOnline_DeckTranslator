@@ -3,9 +3,6 @@
 # emacs の自動保存ファイル *~
 *~
 
-# テスト用の htm, html ファイル
-*.htm
-*.html
 
 # テスト結果の txt ファイル
 *.txt

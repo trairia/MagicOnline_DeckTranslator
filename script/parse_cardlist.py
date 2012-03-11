@@ -90,7 +90,6 @@ def output_list(ofilename, clist):
     except IOError:
         print 'cannot open file : %s' % ofilename
     else:
-        print ', '.join(clist[0].keys())
         for card in clist:
             c_type = card_type(card['Type'])
             subType = 'null'
@@ -102,6 +101,8 @@ def output_list(ofilename, clist):
             fileHandle.write('  Cost: %s\n' % card['Cost'])
             fileHandle.write('  MainType: %d\n' % c_type['mainType'])
             fileHandle.write('  SubType: [%s]\n' % subType)
+            if 'Color' in card.keys():
+                fileHandle.write('  Color: %s\n' % card['Color'])
             fileHandle.write(u'\n')
             
 def main():

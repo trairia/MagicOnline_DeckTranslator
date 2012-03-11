@@ -1,0 +1,1038 @@
+- Name_en: Afflicted Deserter
+  Name_ja: 苦悩の脱走者
+  Cost: 3R
+  MainType: 1024
+  SubType: [Human, Werewolf]
+
+- Name_en: Alpha Brawl
+  Name_ja: 頭目の乱闘
+  Cost: 6RR
+  MainType: 64
+  SubType: [null]
+
+- Name_en: Altar of the Lost
+  Name_ja: 迷いし者の祭壇
+  Cost: 3
+  MainType: 256
+  SubType: [null]
+
+- Name_en: Archangel's Light
+  Name_ja: 大天使の光
+  Cost: 7W
+  MainType: 64
+  SubType: [null]
+
+- Name_en: Archdemon of Greed
+  Name_ja: 強欲の大悪魔
+  Cost: 
+  MainType: 1024
+  SubType: [Demon]
+  Color: Black
+
+- Name_en: Artful Dodge
+  Name_ja: 巧みな回避
+  Cost: U
+  MainType: 64
+  SubType: [null]
+
+- Name_en: Avacyn's Collar
+  Name_ja: アヴァシンの首飾り
+  Cost: 1
+  MainType: 256
+  SubType: [Equipment]
+
+- Name_en: Bar the Door
+  Name_ja: 扉に閂
+  Cost: 2W
+  MainType: 128
+  SubType: [null]
+
+- Name_en: Beguiler of Wills
+  Name_ja: 意思の詐話師
+  Cost: 3UU
+  MainType: 1024
+  SubType: [Human, Wizard]
+
+- Name_en: Black Cat
+  Name_ja: 黒猫
+  Cost: 1B
+  MainType: 1024
+  SubType: [Zombie, Cat]
+
+- Name_en: Blood Feud
+  Name_ja: 血の抗争
+  Cost: 4RR
+  MainType: 64
+  SubType: [null]
+
+- Name_en: Bone to Ash
+  Name_ja: 骨を灰に
+  Cost: 2UU
+  MainType: 128
+  SubType: [null]
+
+- Name_en: Break of Day
+  Name_ja: 暁天
+  Cost: 1W
+  MainType: 128
+  SubType: [null]
+
+- Name_en: Briarpack Alpha
+  Name_ja: 茨群れの頭目
+  Cost: 3G
+  MainType: 1024
+  SubType: [Wolf]
+
+- Name_en: Burden of Guilt
+  Name_ja: 罪の重責
+  Cost: W
+  MainType: 512
+  SubType: [Aura]
+
+- Name_en: Burning Oil
+  Name_ja: 燃える油
+  Cost: 1R
+  MainType: 128
+  SubType: [null]
+
+- Name_en: Call to the Kindred
+  Name_ja: 同族の呼び声
+  Cost: 3U
+  MainType: 512
+  SubType: [Aura]
+
+- Name_en: Chalice of Death
+  Name_ja: 死の杯
+  Cost: 
+  MainType: 256
+  SubType: [null]
+
+- Name_en: Chalice of Life
+  Name_ja: 生の杯
+  Cost: 3
+  MainType: 256
+  SubType: [null]
+
+- Name_en: Chant of the Skifsang
+  Name_ja: スキフサングの詠唱
+  Cost: 2U
+  MainType: 512
+  SubType: [Aura]
+
+- Name_en: Chill of Foreboding
+  Name_ja: 予言の寒気
+  Cost: 2U
+  MainType: 64
+  SubType: [null]
+
+- Name_en: Chosen of Markov
+  Name_ja: マルコフに選ばれし者
+  Cost: 2B
+  MainType: 1024
+  SubType: [Human]
+
+- Name_en: Clinging Mists
+  Name_ja: しがみつく霧
+  Cost: 2G
+  MainType: 128
+  SubType: [null]
+
+- Name_en: Counterlash
+  Name_ja: 対抗激
+  Cost: 4UU
+  MainType: 128
+  SubType: [null]
+
+- Name_en: Crushing Vines
+  Name_ja: 押し潰す蔦
+  Cost: 2G
+  MainType: 128
+  SubType: [null]
+
+- Name_en: Curse of Bloodletting
+  Name_ja: 流血の呪い
+  Cost: 3RR
+  MainType: 512
+  SubType: [Aura, Curse]
+
+- Name_en: Curse of Echoes
+  Name_ja: こだまの呪い
+  Cost: 4U
+  MainType: 512
+  SubType: [Aura, Curse]
+
+- Name_en: Curse of Exhaustion
+  Name_ja: 疲労の呪い
+  Cost: 2WW
+  MainType: 512
+  SubType: [Aura, Curse]
+
+- Name_en: Curse of Misfortunes
+  Name_ja: 不幸の呪い
+  Cost: 4B
+  MainType: 512
+  SubType: [Aura, Curse]
+
+- Name_en: Curse of Thirst
+  Name_ja: 渇きの呪い
+  Cost: 4B
+  MainType: 512
+  SubType: [Aura, Curse]
+
+- Name_en: Dawntreader Elk
+  Name_ja: 夜明け歩きの大鹿
+  Cost: 1G
+  MainType: 1024
+  SubType: [Elk]
+
+- Name_en: Deadly Allure
+  Name_ja: 命取りの魅惑
+  Cost: B
+  MainType: 64
+  SubType: [null]
+
+- Name_en: Death's Caress
+  Name_ja: 死の愛撫
+  Cost: 3BB
+  MainType: 64
+  SubType: [null]
+
+- Name_en: Deranged Outcast
+  Name_ja: 錯乱したのけ者
+  Cost: 1G
+  MainType: 1024
+  SubType: [Human, Rogue]
+
+- Name_en: Diregraf Captain
+  Name_ja: 戦墓の隊長
+  Cost: 1UB
+  MainType: 1024
+  SubType: [Zombie, Soldier]
+
+- Name_en: Divination
+  Name_ja: 予言
+  Cost: 2U
+  MainType: 64
+  SubType: [null]
+
+- Name_en: Drogskol Captain
+  Name_ja: ドラグスコルの隊長
+  Cost: 1WU
+  MainType: 1024
+  SubType: [Spirit, Soldier]
+
+- Name_en: Drogskol Reaver
+  Name_ja: ドラグスコルの肉裂き
+  Cost: 5WU
+  MainType: 1024
+  SubType: [Spirit]
+
+- Name_en: Dungeon Geists
+  Name_ja: 地下牢の霊
+  Cost: 2UU
+  MainType: 1024
+  SubType: [Spirit]
+
+- Name_en: Elbrus, the Binding Blade
+  Name_ja: 束縛の刃、エルブラス
+  Cost: 7
+  MainType: 33024
+  SubType: [Equipment]
+
+- Name_en: Elgaud Inquisitor
+  Name_ja: エルゴードの審問官
+  Cost: 3W
+  MainType: 1024
+  SubType: [Human, Cleric]
+
+- Name_en: Erdwal Ripper
+  Name_ja: エルドワルの切り裂き魔
+  Cost: 1RR
+  MainType: 1024
+  SubType: [Vampire]
+
+- Name_en: Evolving Wilds
+  Name_ja: 進化する未開地
+  Cost: 
+  MainType: 2048
+  SubType: [null]
+
+- Name_en: Executioner's Hood
+  Name_ja: 処刑人の頭巾
+  Cost: 2
+  MainType: 256
+  SubType: [Equipment]
+
+- Name_en: Faithless Looting
+  Name_ja: 信仰無き物あさり
+  Cost: R
+  MainType: 64
+  SubType: [null]
+
+- Name_en: Faith's Shield
+  Name_ja: 信仰の盾
+  Cost: W
+  MainType: 128
+  SubType: [null]
+
+- Name_en: Falkenrath Aristocrat
+  Name_ja: ファルケンラスの貴種
+  Cost: 2BR
+  MainType: 1024
+  SubType: [Vampire]
+
+- Name_en: Falkenrath Torturer
+  Name_ja: ファルケンラスの拷問者
+  Cost: 2B
+  MainType: 1024
+  SubType: [Vampire]
+
+- Name_en: Farbog Boneflinger
+  Name_ja: 遠沼の骨投げ
+  Cost: 4B
+  MainType: 1024
+  SubType: [Zombie]
+
+- Name_en: Favor of the Woods
+  Name_ja: 森林の好意
+  Cost: 2G
+  MainType: 512
+  SubType: [Aura]
+
+- Name_en: Feed the Pack
+  Name_ja: 群れに餌
+  Cost: 5G
+  MainType: 512
+  SubType: [null]
+
+- Name_en: Fiend of the Shadows
+  Name_ja: 影の悪鬼
+  Cost: 3BB
+  MainType: 1024
+  SubType: [Vampire, Wizard]
+
+- Name_en: Fires of Undeath
+  Name_ja: 不死の火
+  Cost: 2R
+  MainType: 128
+  SubType: [null]
+
+- Name_en: Flayer of the Hatebound
+  Name_ja: 憎悪縛りの剥ぎ取り
+  Cost: 5R
+  MainType: 1024
+  SubType: [Devil]
+
+- Name_en: Fling
+  Name_ja: 投げ飛ばし
+  Cost: 1R
+  MainType: 128
+  SubType: [null]
+
+- Name_en: Forge Devil
+  Name_ja: 炉の小悪魔
+  Cost: R
+  MainType: 1024
+  SubType: [Devil]
+
+- Name_en: Gather the Townsfolk
+  Name_ja: 町民の結集
+  Cost: 1W
+  MainType: 64
+  SubType: [null]
+
+- Name_en: Gavony Ironwright
+  Name_ja: ガヴォニーの鉄大工
+  Cost: 2W
+  MainType: 1024
+  SubType: [Human, Soldier]
+
+- Name_en: Geralf's Messenger
+  Name_ja: ゲラルフの伝書使
+  Cost: BBB
+  MainType: 1024
+  SubType: [Zombie]
+
+- Name_en: Geralf's Mindcrusher
+  Name_ja: ゲラルフの精神壊し
+  Cost: 4UU
+  MainType: 1024
+  SubType: [Zombie, Horror]
+
+- Name_en: Ghastly Haunting
+  Name_ja: 恐ろしい憑依
+  Cost: 
+  MainType: 512
+  SubType: [Aura]
+  Color: Blue
+
+- Name_en: Ghoultree
+  Name_ja: グール樹
+  Cost: 7G
+  MainType: 1024
+  SubType: [Zombie, Treefolk]
+
+- Name_en: Grafdigger's Cage
+  Name_ja: 墓掘りの檻
+  Cost: 1
+  MainType: 256
+  SubType: [null]
+
+- Name_en: Gravecrawler
+  Name_ja: 墓所這い
+  Cost: B
+  MainType: 1024
+  SubType: [Zombie]
+
+- Name_en: Gravepurge
+  Name_ja: 墓所粛正
+  Cost: 2B
+  MainType: 128
+  SubType: [null]
+
+- Name_en: Gravetiller Wurm
+  Name_ja: 墓耕しのワーム
+  Cost: 5G
+  MainType: 1024
+  SubType: [Wurm]
+
+- Name_en: Grim Backwoods
+  Name_ja: 不気味な辺境林
+  Cost: 
+  MainType: 2048
+  SubType: [null]
+
+- Name_en: Grim Flowering
+  Name_ja: 不気味な開花
+  Cost: 5G
+  MainType: 64
+  SubType: [null]
+
+- Name_en: Griptide
+  Name_ja: 捕海
+  Cost: 3U
+  MainType: 128
+  SubType: [null]
+
+- Name_en: Gruesome Discovery
+  Name_ja: 陰惨な発見
+  Cost: 2BB
+  MainType: 64
+  SubType: [null]
+
+- Name_en: Harrowing Journey
+  Name_ja: 悲惨な旅
+  Cost: 4B
+  MainType: 64
+  SubType: [null]
+
+- Name_en: Haunted Fengraf
+  Name_ja: 憑依された沼墓
+  Cost: 
+  MainType: 2048
+  SubType: [null]
+
+- Name_en: Havengul Lich
+  Name_ja: ヘイヴングルの死者
+  Cost: 3UB
+  MainType: 1024
+  SubType: [Zombie, Wizard]
+
+- Name_en: Havengul Runebinder
+  Name_ja: ヘイヴングルのルーン縛り
+  Cost: 2UU
+  MainType: 1024
+  SubType: [Human, Wizard]
+
+- Name_en: Headless Skaab
+  Name_ja: 首無しスカーブ
+  Cost: 2U
+  MainType: 1024
+  SubType: [Zombie, Warrior]
+
+- Name_en: Heavy Mattock
+  Name_ja: 重いつるはし
+  Cost: 3
+  MainType: 256
+  SubType: [Equipment]
+
+- Name_en: Heckling Fiends
+  Name_ja: やじる悪鬼
+  Cost: 2R
+  MainType: 1024
+  SubType: [Devil]
+
+- Name_en: Hellrider
+  Name_ja: 地獄乗り
+  Cost: 2RR
+  MainType: 1024
+  SubType: [Devil]
+
+- Name_en: Helvault
+  Name_ja: 獄庫
+  Cost: 3
+  MainType: 33024
+  SubType: [null]
+
+- Name_en: Highborn Ghoul
+  Name_ja: 名門のグール
+  Cost: BB
+  MainType: 1024
+  SubType: [Zombie]
+
+- Name_en: Hinterland Hermit
+  Name_ja: 内陸の隠遁者
+  Cost: 1R
+  MainType: 1024
+  SubType: [Human, Werewolf]
+
+- Name_en: Hinterland Scourge
+  Name_ja: 内陸の災い魔
+  Cost: 
+  MainType: 1024
+  SubType: [Werewolf]
+  Color: Red
+
+- Name_en: Hollowhenge Beast
+  Name_ja: ホロウヘンジの獣
+  Cost: 3GG
+  MainType: 1024
+  SubType: [Beast]
+
+- Name_en: Hollowhenge Spirit
+  Name_ja: ホロウヘンジの霊魂
+  Cost: 3W
+  MainType: 1024
+  SubType: [Spirit]
+
+- Name_en: Hunger of the Howlpack
+  Name_ja: 吠え群れの飢え
+  Cost: G
+  MainType: 128
+  SubType: [null]
+
+- Name_en: Huntmaster of the Fells
+  Name_ja: 高原の狩りの達人
+  Cost: 2RG
+  MainType: 1024
+  SubType: [Human, Werewolf]
+
+- Name_en: Immerwolf
+  Name_ja: 常なる狼
+  Cost: 1RG
+  MainType: 1024
+  SubType: [Wolf]
+
+- Name_en: Increasing Ambition
+  Name_ja: 高まる野心
+  Cost: 4B
+  MainType: 64
+  SubType: [null]
+
+- Name_en: Increasing Confusion
+  Name_ja: 高まる混乱
+  Cost: XU
+  MainType: 64
+  SubType: [null]
+
+- Name_en: Increasing Devotion
+  Name_ja: 高まる献身
+  Cost: 3WW
+  MainType: 64
+  SubType: [null]
+
+- Name_en: Increasing Savagery
+  Name_ja: 高まる残虐性
+  Cost: 2GG
+  MainType: 64
+  SubType: [null]
+
+- Name_en: Increasing Vengeance
+  Name_ja: 高まる復讐心
+  Cost: RR
+  MainType: 128
+  SubType: [null]
+
+- Name_en: Jar of Eyeballs
+  Name_ja: 目玉の壺
+  Cost: 3
+  MainType: 256
+  SubType: [null]
+
+- Name_en: Kessig Recluse
+  Name_ja: ケッシグの出家蜘蛛
+  Cost: 2GG
+  MainType: 1024
+  SubType: [Spider]
+
+- Name_en: Krallenhorde Killer
+  Name_ja: 爪の群れの殺人者
+  Cost: 
+  MainType: 1024
+  SubType: [Werewolf]
+  Color: Green
+
+- Name_en: Lambholt Elder
+  Name_ja: ラムホルトの古老
+  Cost: 2G
+  MainType: 1024
+  SubType: [Human, Werewolf]
+
+- Name_en: Lingering Souls
+  Name_ja: 未練ある魂
+  Cost: 2W
+  MainType: 64
+  SubType: [null]
+
+- Name_en: Lost in the Woods
+  Name_ja: 森での迷子
+  Cost: 3GG
+  MainType: 512
+  SubType: [null]
+
+- Name_en: Loyal Cathar
+  Name_ja: 忠実な聖戦士
+  Cost: WW
+  MainType: 1024
+  SubType: [Human, Soldier]
+
+- Name_en: Markov Blademaster
+  Name_ja: マルコフの刃の達人
+  Cost: 1RR
+  MainType: 1024
+  SubType: [Vampire, Warrior]
+
+- Name_en: Markov Warlord
+  Name_ja: マルコフの大将軍
+  Cost: 5R
+  MainType: 1024
+  SubType: [Vampire, Warrior]
+
+- Name_en: Markov's Servant
+  Name_ja: マルコフの召使い
+  Cost: 
+  MainType: 1024
+  SubType: [Vampire]
+  Color: Black
+
+- Name_en: Midnight Guard
+  Name_ja: 深夜の護衛
+  Cost: 2W
+  MainType: 1024
+  SubType: [Human, Soldier]
+
+- Name_en: Mikaeus, the Unhallowed
+  Name_ja: 不浄なる者、ミケウス
+  Cost: 3BBB
+  MainType: 33792
+  SubType: [Zombie, Cleric]
+
+- Name_en: Mondronen Shaman
+  Name_ja: モンドロネンのシャーマン
+  Cost: 3R
+  MainType: 1024
+  SubType: [Human, Werewolf, Shaman]
+
+- Name_en: Moonscarred Werewolf
+  Name_ja: 月傷の狼男
+  Cost: 
+  MainType: 1024
+  SubType: [Werewolf]
+  Color: Green
+
+- Name_en: Moonveil Dragon
+  Name_ja: 月の帳のドラゴン
+  Cost: 3RRR
+  MainType: 1024
+  SubType: [Dragon]
+
+- Name_en: Mystic Retrieval
+  Name_ja: 神秘の回復
+  Cost: 3U
+  MainType: 64
+  SubType: [null]
+
+- Name_en: Nearheath Stalker
+  Name_ja: 近野の忍び寄り
+  Cost: 4R
+  MainType: 1024
+  SubType: [Vampire, Rogue]
+
+- Name_en: Nephalia Seakite
+  Name_ja: ネファリアの海鳶
+  Cost: 3U
+  MainType: 1024
+  SubType: [Bird]
+
+- Name_en: Niblis of the Breath
+  Name_ja: 息吹のニブリス
+  Cost: 2U
+  MainType: 1024
+  SubType: [Spirit]
+
+- Name_en: Niblis of the Mist
+  Name_ja: 霧のニブリス
+  Cost: 2W
+  MainType: 1024
+  SubType: [Spirit]
+
+- Name_en: Niblis of the Urn
+  Name_ja: 壺のニブリス
+  Cost: 1W
+  MainType: 1024
+  SubType: [Spirit]
+
+- Name_en: Predator Ooze
+  Name_ja: 捕食者のウーズ
+  Cost: GGG
+  MainType: 1024
+  SubType: [Ooze]
+
+- Name_en: Pyreheart Wolf
+  Name_ja: 紅蓮心の狼
+  Cost: 2R
+  MainType: 1024
+  SubType: [Wolf]
+
+- Name_en: Ravager of the Fells
+  Name_ja: 高原の荒廃者
+  Cost: 
+  MainType: 1024
+  SubType: [Werewolf]
+  Color: Red/Green
+
+- Name_en: Ravenous Demon
+  Name_ja: 貪欲なる悪魔
+  Cost: 3BB
+  MainType: 1024
+  SubType: [Demon]
+
+- Name_en: Ray of Revelation
+  Name_ja: 天啓の光
+  Cost: 1W
+  MainType: 128
+  SubType: [null]
+
+- Name_en: Reap the Seagraf
+  Name_ja: 海墓の刈り取り
+  Cost: 2B
+  MainType: 64
+  SubType: [null]
+
+- Name_en: Relentless Skaabs
+  Name_ja: 執拗なスカーブ
+  Cost: 3UU
+  MainType: 1024
+  SubType: [Zombie]
+
+- Name_en: Requiem Angel
+  Name_ja: 鎮魂歌の天使
+  Cost: 5W
+  MainType: 1024
+  SubType: [Angel]
+
+- Name_en: Russet Wolves
+  Name_ja: 茜の狼
+  Cost: 3R
+  MainType: 1024
+  SubType: [Wolf]
+
+- Name_en: Sanctuary Cat
+  Name_ja: 聖所の猫
+  Cost: W
+  MainType: 1024
+  SubType: [Cat]
+
+- Name_en: Saving Grasp
+  Name_ja: 救助の手
+  Cost: U
+  MainType: 128
+  SubType: [null]
+
+- Name_en: Scorch the Fields
+  Name_ja: 野の焼き払い
+  Cost: 4R
+  MainType: 64
+  SubType: [null]
+
+- Name_en: Scorned Villager
+  Name_ja: 軽蔑された村人
+  Cost: 1G
+  MainType: 1024
+  SubType: [Human, Werewolf]
+
+- Name_en: Screeching Skaab
+  Name_ja: 金切り声のスカーブ
+  Cost: 1U
+  MainType: 1024
+  SubType: [Zombie]
+
+- Name_en: Séance
+  Name_ja: 降霊術
+  Cost: 2WW
+  MainType: 512
+  SubType: [null]
+
+- Name_en: Secrets of the Dead
+  Name_ja: 死者の秘密
+  Cost: 2U
+  MainType: 512
+  SubType: [null]
+
+- Name_en: Shattered Perception
+  Name_ja: 砕かれた知覚
+  Cost: 2R
+  MainType: 64
+  SubType: [null]
+
+- Name_en: Shriekgeist
+  Name_ja: 叫び霊
+  Cost: 1U
+  MainType: 1024
+  SubType: [Spirit]
+
+- Name_en: Sightless Ghoul
+  Name_ja: 盲いたグール
+  Cost: 3B
+  MainType: 1024
+  SubType: [Zombie, Soldier]
+
+- Name_en: Silverclaw Griffin
+  Name_ja: 銀爪のグリフィン
+  Cost: 3WW
+  MainType: 1024
+  SubType: [Griffin]
+
+- Name_en: Silverpelt Werewolf
+  Name_ja: 銀皮の狼男
+  Cost: 
+  MainType: 1024
+  SubType: [Werewolf]
+  Color: Green
+
+- Name_en: Skillful Lunge
+  Name_ja: 熟練の突き
+  Cost: 1W
+  MainType: 128
+  SubType: [null]
+
+- Name_en: Skirsdag Flayer
+  Name_ja: スカースダグの剥ぎ取り
+  Cost: 1B
+  MainType: 1024
+  SubType: [Human, Cleric]
+
+- Name_en: Somberwald Dryad
+  Name_ja: ソンバーワルドのドライアド
+  Cost: 1G
+  MainType: 1024
+  SubType: [Dryad]
+
+- Name_en: Sorin, Lord of Innistrad
+  Name_ja: イニストラードの君主、ソリン
+  Cost: 2WB
+  MainType: 32
+  SubType: [Sorin]
+
+- Name_en: Soul Seizer
+  Name_ja: 魂を捕えるもの
+  Cost: 3UU
+  MainType: 1024
+  SubType: [Spirit]
+
+- Name_en: Spiteful Shadows
+  Name_ja: 悪意に満ちた影
+  Cost: 1B
+  MainType: 512
+  SubType: [Aura]
+
+- Name_en: Stormbound Geist
+  Name_ja: 嵐縛りの霊
+  Cost: 1UU
+  MainType: 1024
+  SubType: [Spirit]
+
+- Name_en: Strangleroot Geist
+  Name_ja: 絡み根の霊
+  Cost: GG
+  MainType: 1024
+  SubType: [Spirit]
+
+- Name_en: Stromkirk Captain
+  Name_ja: 流城の隊長
+  Cost: 1BR
+  MainType: 1024
+  SubType: [Vampire, Soldier]
+
+- Name_en: Sudden Disappearance
+  Name_ja: 突然の消失
+  Cost: 5W
+  MainType: 64
+  SubType: [null]
+
+- Name_en: Talons of Falkenrath
+  Name_ja: ファルケンラスの鉤爪
+  Cost: 1R
+  MainType: 512
+  SubType: [Aura]
+
+- Name_en: Thalia, Guardian of Thraben
+  Name_ja: スレイベンの守護者、サリア
+  Cost: 1W
+  MainType: 33792
+  SubType: [Human, Soldier]
+
+- Name_en: Thought Scour
+  Name_ja: 思考掃き
+  Cost: U
+  MainType: 128
+  SubType: [null]
+
+- Name_en: Thraben Doomsayer
+  Name_ja: スレイベンの破滅預言者
+  Cost: 1WW
+  MainType: 1024
+  SubType: [Human, Cleric]
+
+- Name_en: Thraben Heretic
+  Name_ja: スレイベンの異端者
+  Cost: 1W
+  MainType: 1024
+  SubType: [Human, Wizard]
+
+- Name_en: Torch Fiend
+  Name_ja: 松明の悪鬼
+  Cost: 1R
+  MainType: 1024
+  SubType: [Devil]
+
+- Name_en: Tovolar's Magehunter
+  Name_ja: トヴォラーの魔道士狩り
+  Cost: 
+  MainType: 1024
+  SubType: [Werewolf]
+  Color: Red
+
+- Name_en: Tower Geist
+  Name_ja: 塔の霊
+  Cost: 3U
+  MainType: 1024
+  SubType: [Spirit]
+
+- Name_en: Tracker's Instincts
+  Name_ja: 追跡者の本能
+  Cost: 1G
+  MainType: 64
+  SubType: [null]
+
+- Name_en: Tragic Slip
+  Name_ja: 悲劇的な過ち
+  Cost: B
+  MainType: 128
+  SubType: [null]
+
+- Name_en: Ulvenwald Bear
+  Name_ja: ウルヴェンワルドの熊
+  Cost: 2G
+  MainType: 1024
+  SubType: [Bear]
+
+- Name_en: Undying Evil
+  Name_ja: 死せざる邪悪
+  Cost: B
+  MainType: 128
+  SubType: [null]
+
+- Name_en: Unhallowed Cathar
+  Name_ja: 不浄の聖戦士
+  Cost: 
+  MainType: 1024
+  SubType: [Zombie, Soldier]
+  Color: Black
+
+- Name_en: Vault of the Archangel
+  Name_ja: 大天使の霊堂
+  Cost: 
+  MainType: 2048
+  SubType: [null]
+
+- Name_en: Vengeful Vampire
+  Name_ja: 復讐に燃えた吸血鬼
+  Cost: 4BB
+  MainType: 1024
+  SubType: [Vampire]
+
+- Name_en: Village Survivors
+  Name_ja: 村の生き残り
+  Cost: 4G
+  MainType: 1024
+  SubType: [Human]
+
+- Name_en: Vorapede
+  Name_ja: 食百足
+  Cost: 2GGG
+  MainType: 1024
+  SubType: [Insect]
+
+- Name_en: Wakedancer
+  Name_ja: 覚醒舞い
+  Cost: 2B
+  MainType: 1024
+  SubType: [Human, Shaman]
+
+- Name_en: Warden of the Wall
+  Name_ja: 壁の守部
+  Cost: 3
+  MainType: 256
+  SubType: [null]
+
+- Name_en: Werewolf Ransacker
+  Name_ja: 狼男の荒らし屋
+  Cost: 
+  MainType: 1024
+  SubType: [Werewolf]
+  Color: Red
+
+- Name_en: Wild Hunger
+  Name_ja: 野生の飢え
+  Cost: 2G
+  MainType: 128
+  SubType: [null]
+
+- Name_en: Withengar Unbound
+  Name_ja: 解き放たれたウィゼンガー
+  Cost: 
+  MainType: 33792
+  SubType: [Demon]
+  Color: Black
+
+- Name_en: Wolfbitten Captive
+  Name_ja: 狼に噛まれた囚人
+  Cost: G
+  MainType: 1024
+  SubType: [Human, Werewolf]
+
+- Name_en: Wolfhunter's Quiver
+  Name_ja: 狼狩りの矢筒
+  Cost: 1
+  MainType: 256
+  SubType: [Equipment]
+
+- Name_en: Wrack with Madness
+  Name_ja: 狂気の残骸
+  Cost: 3R
+  MainType: 64
+  SubType: [null]
+
+- Name_en: Young Wolf
+  Name_ja: 若き狼
+  Cost: G
+  MainType: 1024
+  SubType: [Wolf]
+
+- Name_en: Zombie Apocalypse
+  Name_ja: ゾンビの黙示録
+  Cost: 3BBB
+  MainType: 64
+  SubType: [null]
+
