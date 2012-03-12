@@ -7,6 +7,8 @@ import re
 
 card_type_list ={'Legendary'   :0x8000,
                  'Tribal'      :0x4000,
+                 'Basic'       :0x2000,
+                 'Snow'        :0x1000,
                  'Land'        :0x0800,
                  'Creature'    :0x0400,
                  'Enchantment' :0x0200,
@@ -59,13 +61,18 @@ def load_html(htmlfile):
                 a_tag = td_tags[1].find('a')
                 txt = None
                 prop = td_tags[0].contents[0].strip()[0:-1]
+
                 if not a_tag == None:
                     """
                     カードのプロパティ(Name)
                     """
                     txt = a_tag.contents[0]
-                    ja,en = [elem[0:-1] for elem in txt.split('(')]
-                    card_data[prop] = {u'ja':ja,u'en':en}
+                    names = txt.split('(')
+                    if len(names)==2:
+                        names_ja = names[0]
+                        names_en = names[1][0:-1]
+                        card_data[prop] = {u'ja':names_ja,u'en':names_en} 
+
                 else:
                     """
                     その他のプロパティはもう一段階深いタグ
@@ -95,7 +102,12 @@ def output_list(ofilename, clist):
             subType = 'null'
             if c_type['subType']:
                 subType = ", ".join(c_type['subType'])
-
+            
+            # export as yaml
+            print card.keys()
+            if not 'Name' in card:
+                print card['Rules Text']
+                print card['Cost']
             fileHandle.write('- Name_en: %s\n' % card['Name']['en'])
             fileHandle.write('  Name_ja: %s\n' % card['Name']['ja'])
             fileHandle.write('  Cost: %s\n' % card['Cost'])
@@ -106,7 +118,7 @@ def output_list(ofilename, clist):
             fileHandle.write(u'\n')
             
 def main():
-    clist = load_html("DKA.htm")
-    output_list("result.yaml",clist)
+    clist = load_html("standard.htm")
+    output_list("standard.yaml",clist)
 if __name__ == "__main__":
     main()

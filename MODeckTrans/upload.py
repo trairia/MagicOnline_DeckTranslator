@@ -9,12 +9,23 @@ from google.appengine.ext import webapp, db
 from google.appengine.ext.webapp import template
 from google.appengine.ext.webapp.util import run_wsgi_app
 
+
 class MtGCard(db.Model):
-    name = db.TextProperty(required=True)
-    name_ja = db.TextProperty()
+    name = db.StringProperty(required=True)
+    name_ja = db.StringProperty()
     cost = db.StringProperty()
     MainType = db.IntegerProperty()
     SubType = db.ListProperty(str)
+
+def Translate(cardname):
+    query = db.Query(MtGCard)
+    query.filter('name = ', cardname)
+    result = query.get()
+    if result:
+        return result.name_ja.encode('utf-8')
+    else:
+        return cardname
+
 
 class MainPage(webapp.RequestHandler):
     def get(self):
@@ -32,8 +43,34 @@ class upload_decklist(webapp.RequestHandler):
         sideboard = None
         if len(upload_file) == 2:
             sideboard = upload_file[1].split('\r\n')
-        print main_deck
-        print sideboard
+
+        MainDeck = {}
+        for line in main_deck:
+            if line == '':
+                continue
+            tmp = line.split(' ')
+            num = int(tmp[0])
+            name = ' '.join(tmp[1:])
+            MainDeck[name] = MainDeck.get(name, 0) + num
+
+        SideBoard = {}
+        if not sideboard:
+            return
+        
+        for line in sideboard:
+            if line == '':
+                continue
+            tmp = line.split(' ')
+            num = int(tmp[0])
+            name = ' '.join(tmp[1:])
+            SideBoard[name] = SideBoard.get(name, 0) + num
+
+        for k,v in MainDeck.items():
+            print v,' ',Translate(k)
+        print u"\n//side board"
+        for k,v in SideBoard.items():
+            print v,' ',Translate(k)
+
 
 class upload_cardlist(webapp.RequestHandler):
     def get(self):
