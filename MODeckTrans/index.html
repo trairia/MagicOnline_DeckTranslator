@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Magic Online デッキ翻訳機</title>
+    <link type="text/css" rel="stylesheet" href="/stylesheets/main.css">
+  </head>
+  <body>
+    <div id="site_body">
+      <div id="site_header">
+	<!-- header -->
+      </div>
+      <div id="site_navi">
+	<!-- navigation -->
+	<a href="/upload_cardlist">カードリスト管理</a>
+      </div>
+      <div id="site_contents">
+	<!-- contents -->
+	対応しているカードセット
+	<br>
+	※日本語の存在しないカードは英語名で表示されます．
+	<form action={{action}} method="post" enctype="multipart/form-data">
+	  <input type="file" name="fileName">
+	  <input type="submit" name="submit" value="アップロード">
+	</form>
+      </div>
+      <div id="site_footer">
+	<!-- footer -->
+      </div>
+    </div>
+  </body>
+</html>

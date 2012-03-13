@@ -34,7 +34,7 @@ class MainPage(webapp.RequestHandler):
 class upload_decklist(webapp.RequestHandler):
     def get(self):
         template_values = {'action':'/upload_decklist'}
-        path = os.path.join(os.path.dirname(__file__), 'upload.html')
+        path = os.path.join(os.path.dirname(__file__), 'index.html')
         self.response.out.write(template.render(path, template_values))
         
     def post(self):
@@ -75,7 +75,7 @@ class upload_decklist(webapp.RequestHandler):
 class upload_cardlist(webapp.RequestHandler):
     def get(self):
         template_values = {'action':'/upload_cardlist'}
-        path = os.path.join(os.path.dirname(__file__), 'upload.html')
+        path = os.path.join(os.path.dirname(__file__), 'index.html')
         self.response.out.write(template.render(path, template_values))
 
     def post(self):
@@ -104,7 +104,7 @@ class upload_cardlist(webapp.RequestHandler):
                 print "Error position: (%s:%s)"%(mark.line+1, mark.column+1)
                                                 
 application = webapp.WSGIApplication(
-    [('/',MainPage),
+    [('/',upload_decklist),
      ('/upload_decklist',upload_decklist),
      ('/upload_cardlist',upload_cardlist)],
     debug=True)
