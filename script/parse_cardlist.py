@@ -33,7 +33,7 @@ def card_type(typestring):
         subType = types[1].strip().split()
 
     for t in mainType:
-        ret['mainType'] += card_type_list[t]
+        ret['mainType'] |= card_type_list[t]
 
     ret['subType'] = subType
 
@@ -104,10 +104,6 @@ def output_list(ofilename, clist):
                 subType = ", ".join(c_type['subType'])
             
             # export as yaml
-            print card.keys()
-            if not 'Name' in card:
-                print card['Rules Text']
-                print card['Cost']
             fileHandle.write('- Name_en: %s\n' % card['Name']['en'])
             fileHandle.write('  Name_ja: %s\n' % card['Name']['ja'])
             fileHandle.write('  Cost: %s\n' % card['Cost'])

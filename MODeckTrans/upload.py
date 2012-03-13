@@ -3,6 +3,9 @@
 import os
 import cgi
 import yaml
+from datetime import datetime
+import dbfuncs
+import cardtype
 
 from google.appengine.api import users
 from google.appengine.ext import webapp, db
@@ -38,39 +41,33 @@ class upload_decklist(webapp.RequestHandler):
         self.response.out.write(template.render(path, template_values))
         
     def post(self):
-        upload_file = self.request.get('fileName').split('Sideboard')
-        main_deck = upload_file[0].split('\r\n')
-        sideboard = None
-        if len(upload_file) == 2:
-            sideboard = upload_file[1].split('\r\n')
+        deck = cardtype.MtGDeck()
+        path = os.path.join(os.path.dirname(__file__), 'result.html')
+        upload_file = self.request.get('fileName')
+        if upload_file:
+            now = datetime.now()
+            deck.fromString(upload_file)
 
-        MainDeck = {}
-        for line in main_deck:
-            if line == '':
-                continue
-            tmp = line.split(' ')
-            num = int(tmp[0])
-            name = ' '.join(tmp[1:])
-            MainDeck[name] = MainDeck.get(name, 0) + num
+            num_lands = sum([l[1] for l in deck.MainDeck['Land']])
+            num_creatures = sum([l[1] for l in deck.MainDeck['Creature']])
+            num_spells = sum([l[1] for l in deck.MainDeck['Spells']])
+            num_sideboard = sum(l[1] for l in deck.SideBoard)
 
-        SideBoard = {}
-        if not sideboard:
-            return
-        
-        for line in sideboard:
-            if line == '':
-                continue
-            tmp = line.split(' ')
-            num = int(tmp[0])
-            name = ' '.join(tmp[1:])
-            SideBoard[name] = SideBoard.get(name, 0) + num
+            template_values = {'Lands' : deck.MainDeck['Land'],
+                               'num_lands' : num_lands,
+                               'Creatures' : deck.MainDeck['Creature'],
+                               'num_creatures' : num_creatures,
+                               'Spells' : deck.MainDeck['Spells'],
+                               'num_spells' : num_spells,
+                               'num_sideboard' : num_sideboard,
+                               'sideboard' : deck.SideBoard}
 
-        for k,v in MainDeck.items():
-            print v,' ',Translate(k)
-        print u"\n//side board"
-        for k,v in SideBoard.items():
-            print v,' ',Translate(k)
+            self.response.out.write(template.render(path, template_values))
 
+        else:
+            template_values = {'action':'/upload_decklist'}
+            path = os.path.join(os.path.dirname(__file__), 'index.html')
+            self.response.out.write(template.render(path, template_values))
 
 class upload_cardlist(webapp.RequestHandler):
     def get(self):
