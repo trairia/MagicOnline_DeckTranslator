@@ -17,11 +17,12 @@ from google.appengine.ext.webapp.util import run_wsgi_app
 class upload_cardlist(webapp.RequestHandler):
     def get(self):
         template_values = {}
-        path = os.path.join(os.path.dirname(__file__), 'admin.html')
+        path = os.path.join(os.path.dirname(__file__), 'htdocs/admin.html')
         self.response.out.write(template.render(path, template_values))
 
     def post(self):
         upload_file = self.request.get('fileName')
+        path = os.path.join(os.path.dirname(__file__), 'htdocs/admin.html')
         message = self.request.get('message')
         try:
             cardlist = yaml.load(upload_file)
@@ -33,8 +34,11 @@ class upload_cardlist(webapp.RequestHandler):
                     card['Cost'] = str(card['Cost'])
 
                 dbfuncs.new_or_overwrite(card)
-            self.response.out.write("%d card added" % len(cardlist))
-            self.response.out.write("<br>")
+            
+            result = len(cardlist)
+            template_values = {'result' : result}
+            self.response.out.write(template.render(path, template_values))
+
             changelog = dbfuncs.ChangeLog()
             changelog.message = message
             changelog.put

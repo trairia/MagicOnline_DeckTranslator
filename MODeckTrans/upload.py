@@ -24,12 +24,12 @@ class MtGCard(db.Model):
 class upload_decklist(webapp.RequestHandler):
     def get(self):
         template_values = {'action':'/upload_decklist'}
-        path = os.path.join(os.path.dirname(__file__), 'index.html')
+        path = os.path.join(os.path.dirname(__file__), 'htdocs/index.html')
         self.response.out.write(template.render(path, template_values))
         
     def post(self):
         deck = cardtype.MtGDeck()
-        path = os.path.join(os.path.dirname(__file__), 'result.html')
+        path = os.path.join(os.path.dirname(__file__), 'htdocs/result.html')
         upload_file = self.request.get('fileName')
         if upload_file:
             now = datetime.now()
@@ -53,14 +53,14 @@ class upload_decklist(webapp.RequestHandler):
 
         else:
             template_values = {'action':'/upload_decklist'}
-            path = os.path.join(os.path.dirname(__file__), 'index.html')
+            path = os.path.join(os.path.dirname(__file__), 'htdocs/index.html')
             self.response.out.write(template.render(path, template_values))
 
 class ChangeLog(webapp.RequestHandler):
     def get(self):
         log = dbfuncs.ChangeLogModel.all()
         template_value = {'changelog' : log}
-        path = os.path.join(os.path.dirname(__file__), 'changelog.html')
+        path = os.path.join(os.path.dirname(__file__), 'htdocs/changelog.html')
         self.response.out.write(template.render(path, template_value))
                                                 
 application = webapp.WSGIApplication(
