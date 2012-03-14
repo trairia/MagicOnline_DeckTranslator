@@ -65,6 +65,7 @@ class Whatis(webapp.RequestHandler):
 class ChangeLog(webapp.RequestHandler):
     def get(self):
         log = dbfuncs.ChangeLogModel.all()
+        log.order('-date')
         template_value = {'changelog' : log}
         path = os.path.join(os.path.dirname(__file__), 'htdocs/changelog.html')
         self.response.out.write(template.render(path, template_value))
