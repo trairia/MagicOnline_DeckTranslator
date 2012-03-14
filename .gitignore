@@ -3,6 +3,12 @@
 # emacs の自動保存ファイル *~
 *~
 
+*.pyc
 
 # テスト結果の txt ファイル
 *.txt
+
+# html ファイルの無視
+script/*.htm
+script/*.html
+script/*.yaml
