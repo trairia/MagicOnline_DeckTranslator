@@ -39,9 +39,9 @@ class upload_cardlist(webapp.RequestHandler):
             template_values = {'result' : result}
             self.response.out.write(template.render(path, template_values))
 
-            changelog = dbfuncs.ChangeLog()
+            changelog = dbfuncs.ChangeLogModel()
             changelog.message = message
-            changelog.put
+            changelog.put()
             
         except yaml.YAMLError, exc:
             if hasattr(exc, 'probem_mark'):
