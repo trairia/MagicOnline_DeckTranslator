@@ -1,9 +1,0 @@
-{% extends "base.html" %}
-<!-- contents -->
-{% block content %}
-※日本語の存在しないカードは英語名で表示されます．
-<form action="/upload_decklist" method="post" enctype="multipart/form-data">
-  <input type="file" name="fileName" accept=".txt">
-  <input type="submit" name="submit" value="アップロード">
-</form>
-{% endblock %}

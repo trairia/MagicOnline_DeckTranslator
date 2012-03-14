@@ -1,8 +1,0 @@
-{% extends "base.html" %}
-<!-- contents -->
-{% block content %}
-<H2>更新履歴</H2>
-{% for log in changelog %}
-{{ log.date|jst|date:"Y-m-d H:i:s" }} {{ log.message }}<br>
-{% endfor %}
-{% endblock %}
