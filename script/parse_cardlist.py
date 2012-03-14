@@ -3,7 +3,7 @@
 import BeautifulSoup as BS
 import codecs
 import re
-
+from optparse import OptionParser
 
 card_type_list ={'Legendary'   :0x8000,
                  'Tribal'      :0x4000,
@@ -15,7 +15,8 @@ card_type_list ={'Legendary'   :0x8000,
                  'Artifact'    :0x0100,
                  'Instant'     :0x0080,
                  'Sorcery'     :0x0040,
-                 'Planeswalker':0x0020}
+                 'Planeswalker':0x0020,
+                 'World'       :0x0010}
 
 def card_type(typestring):
     """
@@ -66,13 +67,16 @@ def load_html(htmlfile):
                     """
                     カードのプロパティ(Name)
                     """
-                    txt = a_tag.contents[0]
+                    txt = a_tag.contents[0].strip()
                     names = txt.split('(')
                     if len(names)==2:
                         names_ja = names[0]
                         names_en = names[1][0:-1]
                         card_data[prop] = {u'ja':names_ja,u'en':names_en} 
-
+                    else:
+                        names_ja = txt
+                        names_en = txt
+                        card_data[prop] = {u'ja':names_ja,u'en':names_en} 
                 else:
                     """
                     その他のプロパティはもう一段階深いタグ
@@ -112,9 +116,23 @@ def output_list(ofilename, clist):
             if 'Color' in card.keys():
                 fileHandle.write('  Color: %s\n' % card['Color'])
             fileHandle.write(u'\n')
-            
+
+def parse_option():
+    usage = "usage: %prog [options] input.html"
+    parser = OptionParser(usage=usage)
+    parser.add_option("-o", "--output", dest="filename",
+                      help="output file.")
+    (options,args) = parser.parse_args()        
+
+    if len(args) != 1:
+        parser.error("incorrect number of arguments")
+    if not options.filename:
+        parser.error("invalid output filename")
+    return (args[0],options.filename)
+
 def main():
-    clist = load_html("standard.htm")
-    output_list("standard.yaml",clist)
+    (inputfile, outputfile) = parse_option()
+    clist = load_html(inputfile)
+    output_list(outputfile,clist)
 if __name__ == "__main__":
     main()

@@ -10,6 +10,10 @@ class MtGCard(db.Model):
     MainType = db.IntegerProperty()
     SubType = db.ListProperty(str)
 
+class ChangeLogModel(db.Model):
+    message = db.TextProperty()
+    date    = db.DateTimeProperty(auto_now_add=True)
+
 def getCardFromDS(cardname):
     query = db.Query(MtGCard)
     query.filter('name = ', cardname)
@@ -25,7 +29,28 @@ def getCardFromDS(cardname):
         card['Name_en']  = cardname
         card['Name_ja']  = cardname
         card['cost']     = None
-        card['mainType'] = None
+        card['mainType'] = 0
         card['subType']  = None
 
     return card
+
+def new_or_overwrite(card):
+    query = db.Query(MtGCard)
+    query.filter('name = ', card['Name_en'])
+    result = query.get()
+    if result:
+        result.name_ja  = card['Name_ja']
+        result.cost     = card['Cost']
+        result.MainType = card['MainType']
+        result.SubType  = card['SubType']
+        result.put()
+    else:
+        obj = MtGCard(name = card['Name_en'],
+                      name_ja = card['Name_ja'],
+                      cost = card['Cost'],
+                      MainType = card['MainType'],
+                      SubType = card['SubType'])
+        obj.put()
+
+    
+        

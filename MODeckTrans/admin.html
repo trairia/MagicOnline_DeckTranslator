@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+<!-- contents -->
+{% block content %}
+カードリストの yaml ファイルをアップロード
+<form action="/admin" method="post" enctype="multipart/form-data">
+  <input type="file" name="fileName">
+  <input type="submit" name="submit" value="アップロード">
+  <br>
+  更新メッセージ<br>
+  <textarea name="message" cols="44", rows="10">
+  </textarea>
+</form>
+{% endblock %}

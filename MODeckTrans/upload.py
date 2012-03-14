@@ -12,6 +12,7 @@ from google.appengine.ext import webapp, db
 from google.appengine.ext.webapp import template
 from google.appengine.ext.webapp.util import run_wsgi_app
 
+webapp.template.register_template_library('jstfilter')
 
 class MtGCard(db.Model):
     name = db.StringProperty(required=True)
@@ -19,20 +20,6 @@ class MtGCard(db.Model):
     cost = db.StringProperty()
     MainType = db.IntegerProperty()
     SubType = db.ListProperty(str)
-
-def Translate(cardname):
-    query = db.Query(MtGCard)
-    query.filter('name = ', cardname)
-    result = query.get()
-    if result:
-        return result.name_ja.encode('utf-8')
-    else:
-        return cardname
-
-
-class MainPage(webapp.RequestHandler):
-    def get(self):
-        pass
 
 class upload_decklist(webapp.RequestHandler):
     def get(self):
@@ -69,41 +56,17 @@ class upload_decklist(webapp.RequestHandler):
             path = os.path.join(os.path.dirname(__file__), 'index.html')
             self.response.out.write(template.render(path, template_values))
 
-class upload_cardlist(webapp.RequestHandler):
+class ChangeLog(webapp.RequestHandler):
     def get(self):
-        template_values = {'action':'/upload_cardlist'}
-        path = os.path.join(os.path.dirname(__file__), 'index.html')
-        self.response.out.write(template.render(path, template_values))
-
-    def post(self):
-        upload_file = self.request.get('fileName')
-        try:
-            cardlist = yaml.load(upload_file)
-            for card in cardlist:
-                if card['SubType'][0] == None:
-                    card['SubType'][0] = ''
-                
-                if str(card['Cost']):
-                    card['Cost'] = str(card['Cost'])
-
-                obj = MtGCard(name = card['Name_en'],
-                              name_ja = card['Name_ja'],
-                              cost = card['Cost'],
-                              MainType = card['MainType'],
-                              SubType = card['SubType'])
-                obj.put()
-            self.response.out.write("%d card added" % len(cardlist))
-            self.response.out.write("<br>")
-            
-        except yaml.YAMLError, exc:
-            if hasattr(exc, 'probem_mark'):
-                mark = exc.problem_mark
-                print "Error position: (%s:%s)"%(mark.line+1, mark.column+1)
+        log = dbfuncs.ChangeLogModel.all()
+        template_value = {'changelog' : log}
+        path = os.path.join(os.path.dirname(__file__), 'changelog.html')
+        self.response.out.write(template.render(path, template_value))
                                                 
 application = webapp.WSGIApplication(
     [('/',upload_decklist),
      ('/upload_decklist',upload_decklist),
-     ('/upload_cardlist',upload_cardlist)],
+     ('/changelog',ChangeLog)],
     debug=True)
 
 def main():
