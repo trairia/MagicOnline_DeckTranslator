@@ -56,6 +56,12 @@ class upload_decklist(webapp.RequestHandler):
             path = os.path.join(os.path.dirname(__file__), 'htdocs/index.html')
             self.response.out.write(template.render(path, template_values))
 
+class Whatis(webapp.RequestHandler):
+    def get(self):
+        template_value = {}
+        path = os.path.join(os.path.dirname(__file__), 'htdocs/whatsthis.html')
+        self.response.out.write(template.render(path, template_value))
+
 class ChangeLog(webapp.RequestHandler):
     def get(self):
         log = dbfuncs.ChangeLogModel.all()
@@ -66,6 +72,7 @@ class ChangeLog(webapp.RequestHandler):
 application = webapp.WSGIApplication(
     [('/',upload_decklist),
      ('/upload_decklist',upload_decklist),
+     ('/whatsthis',Whatis),
      ('/changelog',ChangeLog)],
     debug=True)
 
