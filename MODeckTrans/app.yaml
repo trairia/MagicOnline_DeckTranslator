@@ -17,3 +17,6 @@ handlers:
 
 - url: /.*
   script: upload.py
+
+builtins:
+- remote_api: on
