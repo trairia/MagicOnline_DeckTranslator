@@ -97,7 +97,7 @@ def load_html(htmlfile):
 
 def output_list(ofilename, clist):
     try:
-        fileHandle = codecs.open(ofilename, 'w','utf_8')
+        fileHandle = codecs.open(ofilename, 'wb', encoding='utf_8')
     except IOError:
         print 'cannot open file : %s' % ofilename
     else:
@@ -108,13 +108,13 @@ def output_list(ofilename, clist):
                 subType = ", ".join(c_type['subType'])
             
             # export as yaml
-            fileHandle.write('- Name_en: %s\n' % card['Name']['en'])
-            fileHandle.write('  Name_ja: %s\n' % card['Name']['ja'])
-            fileHandle.write('  Cost: %s\n' % card['Cost'])
+            fileHandle.write('- Name_en: %s\n'% card['Name']['en'])
+            fileHandle.write('  Name_ja: %s\n'% card['Name']['ja'])
+            fileHandle.write('  Cost: %s\n'% card['Cost'])
             fileHandle.write('  MainType: %d\n' % c_type['mainType'])
-            fileHandle.write('  SubType: [%s]\n' % subType)
+            fileHandle.write('  SubType: [%s]\n'.encode('utf-8') % subType)
             if 'Color' in card.keys():
-                fileHandle.write('  Color: %s\n' % card['Color'])
+                fileHandle.write('  Color: %s\n'.encode('utf-8') % card['Color'])
             fileHandle.write(u'\n')
 
 def parse_option():

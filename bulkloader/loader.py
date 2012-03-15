@@ -20,7 +20,7 @@ class DataLoader(bulkloader.Loader):
         file = open(filename)
         def generator():
             for card in yaml.load(file.read().decode('utf-8')):
-                subtype = ['None'] if card['SubType'][0]==None else card['SubType']
+                subtype = [] if card['SubType'][0]==None else card['SubType']
                 yield [card['Name_en'],
                        card['Name_ja'],
                        card['Cost'],
