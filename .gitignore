@@ -12,3 +12,7 @@
 script/*.htm
 script/*.html
 script/*.yaml
+
+# bulkloader のログ
+bulkloader/bulkloader*
+bulkloader/*.yaml
