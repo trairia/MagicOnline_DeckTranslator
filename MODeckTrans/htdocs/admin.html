@@ -6,9 +6,14 @@
   <input type="file" name="fileName">
   <input type="submit" name="submit" value="アップロード">
   <br>
+</form>
+<form action="/admin" method="post" enctype="multipart/form-data">
   更新メッセージ<br>
   <textarea name="message" cols="44", rows="10"></textarea>
+  <input type="submit" name="submit" value="送信"></textarea>
 </form>
+
+
 {% ifnotequal result None %}
 {{result}} 枚のカードを追加しました。
 {% endifnotequal %}

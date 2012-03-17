@@ -24,7 +24,7 @@ class upload_cardlist(webapp.RequestHandler):
         upload_file = self.request.get('fileName')
         path = os.path.join(os.path.dirname(__file__), 'htdocs/admin.html')
         message = self.request.get('message')
-        try:
+        if upload_file:
             cardlist = yaml.load(upload_file)
             for card in cardlist:
                 if card['SubType'][0] == None:
@@ -39,14 +39,12 @@ class upload_cardlist(webapp.RequestHandler):
             template_values = {'result' : result}
             self.response.out.write(template.render(path, template_values))
 
+        if message:
+            template_values = {'result' : None}
             changelog = dbfuncs.ChangeLogModel()
             changelog.message = message
             changelog.put()
-            
-        except yaml.YAMLError, exc:
-            if hasattr(exc, 'probem_mark'):
-                mark = exc.problem_mark
-                print "Error position: (%s:%s)"%(mark.line+1, mark.column+1)
+            self.response.out.write(template.render(path,template_values))
 
 application = webapp.WSGIApplication(
     [('/admin',upload_cardlist)],
