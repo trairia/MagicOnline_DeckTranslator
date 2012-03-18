@@ -41,13 +41,13 @@ class MtGDeck(object):
 
     def fromString(self, deckstring):
         uploaddata = deckstring.split('Sideboard')
-        main_deck = uploaddata[0].split('\r\n')
+        main_deck = uploaddata[0].split('\n')
         sideboard = None
         maincards = {}
         for line in main_deck:
             if line == '':
                 continue
-            tmp = line.split(' ')
+            tmp = line.strip().split(' ')
             num = int(tmp[0])
             name = ' '.join(tmp[1:])
             maincards[name] = maincards.get(name, 0) + num
@@ -64,10 +64,10 @@ class MtGDeck(object):
         if len(uploaddata) == 2:
             self.haveSideBoard = True
             sideboards = {}
-            for line in uploaddata[1].split('\r\n'):
+            for line in uploaddata[1].split('\n'):
                 if line == '':
                     continue
-                tmp = line.split(' ')
+                tmp = line.strip().split(' ')
                 num = int(tmp[0])
                 name = ' '.join(tmp[1:])
                 sideboards[name] = sideboards.get(name,0) + num
