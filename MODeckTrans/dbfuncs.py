@@ -16,7 +16,7 @@ class ChangeLogModel(db.Model):
 
 def getCardFromDS(cardname):
     query = db.Query(MtGCard)
-    query.filter('name = ', cardname)
+    query.filter('name = ', unicode(cardname))
     result = query.get()
     card = {}
     if result:
@@ -26,8 +26,8 @@ def getCardFromDS(cardname):
         card['mainType'] = result.MainType
         card['subType']  = result.SubType
     else:
-        card['Name_en']  = cardname
-        card['Name_ja']  = cardname
+        card['Name_en']  = unicode(cardname)
+        card['Name_ja']  = unicode(cardname)
         card['cost']     = None
         card['mainType'] = 0
         card['subType']  = None
@@ -51,6 +51,3 @@ def new_or_overwrite(card):
                       MainType = card['MainType'],
                       SubType = card['SubType'])
         obj.put()
-
-    
-        

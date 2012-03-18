@@ -30,7 +30,8 @@ class upload_decklist(webapp.RequestHandler):
     def post(self):
         deck = cardtype.MtGDeck()
         path = os.path.join(os.path.dirname(__file__), 'htdocs/result.html')
-        upload_file = self.request.get('fileName')
+        self.request.charset = 'utf-8'
+        upload_file = self.request.get('fileName').decode('utf-8')
         if upload_file:
             now = datetime.now()
             deck.fromString(upload_file)
