@@ -48,7 +48,7 @@ class upload_cardlist(webapp.RequestHandler):
 
 application = webapp.WSGIApplication(
     [('/admin',upload_cardlist)],
-    debug=True)
+    debug=False)
 
 def main():
     run_wsgi_app(application)
