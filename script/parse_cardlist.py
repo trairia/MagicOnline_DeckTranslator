@@ -4,6 +4,7 @@ import BeautifulSoup as BS
 import codecs
 import re
 from optparse import OptionParser
+import yaml
 
 card_type_list ={'Legendary'   :0x8000,
                  'Tribal'      :0x4000,
@@ -101,21 +102,24 @@ def output_list(ofilename, clist):
     except IOError:
         print 'cannot open file : %s' % ofilename
     else:
+        conversioned = []
         for card in clist:
             c_type = card_type(card['Type'])
-            subType = 'null'
+            subType = [None]
             if c_type['subType']:
-                subType = ", ".join(c_type['subType'])
-            
-            # export as yaml
-            fileHandle.write('- Name_en: %s\n'% card['Name']['en'])
-            fileHandle.write('  Name_ja: %s\n'% card['Name']['ja'])
-            fileHandle.write('  Cost: %s\n'% card['Cost'])
-            fileHandle.write('  MainType: %d\n' % c_type['mainType'])
-            fileHandle.write('  SubType: [%s]\n'.encode('utf-8') % subType)
+                subType = c_type['subType']
+            cardyaml = {
+                'Name_en' : card['Name']['en'],
+                'Name_ja' : card['Name']['ja'],
+                'Cost' : card['Cost'],
+                'MainType' : c_type['mainType'],
+                'SubType'  : subType
+                }
             if 'Color' in card.keys():
-                fileHandle.write('  Color: %s\n'.encode('utf-8') % card['Color'])
-            fileHandle.write(u'\n')
+                cardyaml['Color'] = card['Color']
+            conversioned.append(cardyaml)
+        fileHandle.write(yaml.dump(conversioned))
+
 
 def parse_option():
     usage = "usage: %prog [options] input.html"
