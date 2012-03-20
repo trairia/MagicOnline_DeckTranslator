@@ -90,7 +90,7 @@ application = webapp.WSGIApplication(
      ('/upload_decklist',upload_decklist),
      ('/whatsthis',Whatis),
      ('/changelog',ChangeLog)],
-    debug=True)
+    debug=False)
 
 def main():
     run_wsgi_app(application)
