@@ -44,11 +44,13 @@ class MtGDeck(object):
         main_deck = uploaddata[0].split('\n')
         sideboard = None
         maincards = {}
+
         for line in main_deck:
-            if line == '':
-                continue
             tmp = line.strip().split(' ')
-            num = int(tmp[0])
+            if tmp[0].isdigit():
+                num = int(tmp[0])
+            else:
+                continue
             name = ' '.join(tmp[1:])
             maincards[name] = maincards.get(name, 0) + num
 
@@ -65,10 +67,11 @@ class MtGDeck(object):
             self.haveSideBoard = True
             sideboards = {}
             for line in uploaddata[1].split('\n'):
-                if line == '':
-                    continue
                 tmp = line.strip().split(' ')
-                num = int(tmp[0])
+                if tmp[0].isdigit():
+                    num = int(tmp[0])
+                else:
+                    continue
                 name = ' '.join(tmp[1:])
                 sideboards[name] = sideboards.get(name,0) + num
 

@@ -52,7 +52,8 @@ class upload_decklist(webapp.RequestHandler):
         num_lands = sum([l[1] for l in deckdata.MainDeck['Land']])
         num_creatures = sum([l[1] for l in deckdata.MainDeck['Creature']])
         num_spells = sum([l[1] for l in deckdata.MainDeck['Spells']])
-        if (len(deckdata.SideBoard)):
+
+        if not (len(deckdata.SideBoard)):
             num_sideboard = 0
         else:
             num_sideboard = sum(l[1] for l in deckdata.SideBoard)
@@ -89,7 +90,7 @@ application = webapp.WSGIApplication(
      ('/upload_decklist',upload_decklist),
      ('/whatsthis',Whatis),
      ('/changelog',ChangeLog)],
-    debug=False)
+    debug=True)
 
 def main():
     run_wsgi_app(application)
