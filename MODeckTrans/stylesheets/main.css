@@ -12,6 +12,7 @@ div#site_body {
     margin-left:auto;
     margin-right:auto;
     min-height:100%;
+    height: 1024px;
 }
 
 * html div#site_body{
@@ -24,6 +25,8 @@ div#site_body {
 }
 
 #site_header h1{
+    margin-bottom: 20px;
+    margin-height: 20px;
     font-size:38pt;
 }
 
@@ -40,12 +43,13 @@ div#site_body {
 
 #site_navi{
     float:left;
+    padding-left:20px;
     width: 150px;
-    height: 100%;
+    height:926px;
 }
 
 #site_contents{
     float:right;
     width:600px;
-    height: 100%;
+    height: 926px;
 }

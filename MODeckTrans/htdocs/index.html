@@ -4,16 +4,11 @@
 ※日本語の存在しないカードは英語名で表示されます．
 
 <H3>Magic Online からテキストファイルで出力した結果を用いる。</H3>
-<p>
 <form action="/upload_decklist" method="post" enctype="multipart/form-data">
   <input type="file" name="fileName">
   <input type="submit" name="submit" value="翻訳">
 </form>
-</p>
-<br>
-<p>
 <H3>テキストデータをフォームから送信する。</H3>
-</p>
 <form action="/upload_decklist" method="post">
   <textarea name="textdeck" rows=35 cols=40></textarea>
   <input type="submit" name="submit_text" value="翻訳">
