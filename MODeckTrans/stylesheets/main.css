@@ -27,7 +27,7 @@ div#site_body {
 #site_header h1{
     margin-bottom: 20px;
     margin-height: 20px;
-    font-size:38pt;
+    font-size:42pt;
 }
 
 #site_footer{
@@ -52,4 +52,8 @@ div#site_body {
     float:right;
     width:600px;
     height: 926px;
+}
+
+p.notation{
+    font-size:12px;
 }
