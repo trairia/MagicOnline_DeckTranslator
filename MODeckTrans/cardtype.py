@@ -56,6 +56,11 @@ class MtGDeck(object):
 
         for name,num in maincards.items():
             card = dbfuncs.getCardFromDS(name)
+
+            if '/' in name:
+                # for split card
+                name.replace('/','+')
+
             if cardtype(card['mainType']) == 'Land':
                 self.MainDeck['Land'].append((card,num))
             elif cardtype(card['mainType']) == 'Creature':
@@ -76,5 +81,9 @@ class MtGDeck(object):
                 sideboards[name] = sideboards.get(name,0) + num
 
             for name,num in sideboards.items():
+                if '/' in name:
+                    # for split card
+                    name.replace('/','+')
+
                 card = dbfuncs.getCardFromDS(name)
                 self.SideBoard.append((card, num))
