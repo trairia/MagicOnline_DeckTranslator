@@ -1,19 +1,20 @@
 {% extends "base.html" %}
 <!-- contents -->
 {% block content %}
+<img src="/img/patternA.png">
 <p class="notation">
 ※日本語の存在しないカードは英語名で表示されます．
 </p>
-<H3>Magic Online からテキストファイルで出力した結果を用いる</H3>
 <form action="/upload_decklist" method="post" enctype="multipart/form-data">
   <input type="file" name="fileName">
   <input type="submit" name="submit" value="翻訳">
 </form>
-<H3>テキストデータをフォームから送信する</H3>
+<br>
+<img src="/img/patternB.png">
 <p class="notation">
 ※サイドボード込みの場合は、"Sideboard"という一行で区切って下さい。</p>
 <form action="/upload_decklist" method="post">
-  <textarea name="textdeck" rows=35 cols=40></textarea>
+  <textarea name="textdeck" rows=20 cols=40></textarea>
   <input type="submit" name="submit_text" value="翻訳">
 </form>
 

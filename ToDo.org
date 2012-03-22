@@ -1,0 +1,11 @@
+
+* Magic Online デッキ翻訳機
+** TODO 出力言語の選択
+   Ja, En, Ja/En
+
+** TODO コスト関数の解析
+*** TODO マナカーブの作成
+*** TODO カラーパイの作成
+
+
+   

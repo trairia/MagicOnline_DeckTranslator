@@ -1,57 +1,99 @@
-@charset "utf-8"
+@charset "utf-8";
 
-html, body {
-    height:100%;
-    margin:0;
-    padding:0;
-}
-
-div#site_body {
+body {
     width: 780px;
-    position:relative;
-    margin-left:auto;
-    margin-right:auto;
-    min-height:100%;
-    height: 1024px;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    /* background-image: url(/img/bg.png); */
+    /* background-repeat: repeat-x; */
 }
 
-* html div#site_body{
-    height:1000px;
-    padding-bottom:1em;
+#site_body {
 }
 
 #site_header {
-    width: 780px;
+    height: 207px;
+    background-image: url(/img/bg.png);
+    background-repeat: repeat-x;
 }
 
-#site_header h1{
-    margin-bottom: 20px;
-    margin-height: 20px;
-    font-size:42pt;
+#header_bannar{
+    height:83px;
+    line-height:83px;
 }
 
-#site_footer{
-    width: 100%;
-    position: absolute;
-    bottom:0;
-    clear: both;
+#header_bannar h1{
+    color: #FFFFFF;
+    padding-left:15px;
+    font-size:24pt;
+    font-weight:normal;
 }
+
+/* #site_footer{ */
+/*     width: 100%; */
+/*     position: absolute; */
+/*     bottom:0; */
+/*     clear: both; */
+/* } */
 
 #right{
     text-align:right;
 }
 
 #site_navi{
-    float:left;
-    padding-left:20px;
-    width: 150px;
-    height:926px;
+}
+
+#site_navi li{
+    display: inline;
+}
+
+#site_navi li:hover{
+   background-position: center top;
+}
+
+#site_navi li a{
+    width: 140px;
+    height: 69px;
+    line-height: 68px;
+    float: left;
+    text-align: center;
+    font-size: 15px;
+    color: #FFF;
+    text-decoration: none;
+    background-image: url(/img/menu_r.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+#site_navi li a:hover{
+   background-position: center top;
+}
+#site_navi a:visited{
+    color: #FFF
+}
+
+#author{
+    hight:69px;
+    line-height:100px;
+    color:#FFF;
+    float:right;
+    padding-right:30px;
+}
+
+#author a:link{
+    color:#FFF;
+}
+
+#author a:visited{
+    color:#FFF;
 }
 
 #site_contents{
-    float:right;
     width:600px;
-    height: 926px;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 p.notation{
