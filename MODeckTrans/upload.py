@@ -32,7 +32,7 @@ class upload_decklist(webapp.RequestHandler):
         path = os.path.join(os.path.dirname(__file__), 'htdocs/result.html')
         self.request.charset = 'utf-8'
         upload_file = self.request.get('fileName').decode('utf-8')
-        textdeck = self.request.get('textdeck').decode('utf-8')
+        textdeck = self.request.get('textdeck')#.decode('utf-8')
 
         if upload_file:
             self.renderDeck(upload_file)
@@ -90,7 +90,7 @@ application = webapp.WSGIApplication(
      ('/upload_decklist',upload_decklist),
      ('/whatsthis',Whatis),
      ('/changelog',ChangeLog)],
-    debug=False)
+    debug=True)
 
 def main():
     run_wsgi_app(application)
