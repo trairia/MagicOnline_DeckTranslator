@@ -2,16 +2,13 @@
 
 body {
     width: 780px;
-    margin-top: 0px;
-    margin-right: auto;
-    margin-bottom: 0px;
-    margin-left: auto;
+    margin:0 auto;
     /* background-image: url(/img/bg.png); */
     /* background-repeat: repeat-x; */
 }
 
-#site_body {
-}
+/* #site_body { */
+/* } */
 
 #site_header {
     height: 207px;
@@ -42,16 +39,16 @@ body {
     text-align:right;
 }
 
-#site_navi{
-}
+/* #site_navi{ */
+/* } */
 
-#site_navi li{
-    display: inline;
-}
+/* #site_navi li{ */
+/*     display: inline; */
+/* } */
 
-#site_navi li:hover{
-   background-position: center top;
-}
+/* #site_navi li:hover{ */
+/*    background-position: center top; */
+/* } */
 
 #site_navi a{
     width: 140px;
@@ -92,8 +89,7 @@ body {
 
 #site_contents{
     width:600px;
-    margin-left:auto;
-    margin-right:auto;
+    margin:0 auto;
 }
 
 p.notation{
