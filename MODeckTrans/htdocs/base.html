@@ -7,24 +7,24 @@
   </head>
   <body>
     <div id="site_body">
-    <div id="site_header">
-      <div id="header_bannar"> 
-	<H1>Magic Online デッキ翻訳機</H1>
+      <div id="site_header">
+	<div id="header_bannar"> 
+	  <H1>Magic Online デッキ翻訳機</H1>
+	</div>
+	<div id="site_navi">
+	  <!-- navigation -->
+	  <a href="/">TOP</a>
+	  <a href="/whatsthis">はじめに</a>
+	  <a href="/changelog">更新履歴</a>
+	</div>
+	<div id="author">
+	  Author:<a href="http://twitter.com/trairia">あぶ</a>.
+	  powered by <a href="http://code.google.com/intl/ja/appengine/">GAE</a>
+	</div>
       </div>
-      <div id="site_navi">
-	<!-- navigation -->
-	<li><a href="/">TOP</a></li>
-	<li><a href="/whatsthis">はじめに</a></li>
-	<li><a href="/changelog">更新履歴</a></li>
+      <div id="site_contents">
+	{% block content %}{% endblock %}
       </div>
-      <div id="author">
-	Author:<a href="http://twitter.com/trairia">あぶ</a>.
-	powered by <a href="http://code.google.com/intl/ja/appengine/">GAE</a>
-      </div>
-    </div>
-    <div id="site_contents">
-      {% block content %}{% endblock %}
-    </div>
     </div>
   </body>
 </html>

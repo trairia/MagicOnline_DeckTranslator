@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 <!-- contents -->
 {% block content %}
-<img src="/img/patternA.png">
+<img src="/img/patternA.png" alt="Load from .txt file">
 <p class="notation">
 ※日本語の存在しないカードは英語名で表示されます．
 </p>
@@ -10,7 +10,7 @@
   <input type="submit" name="submit" value="翻訳">
 </form>
 <br>
-<img src="/img/patternB.png">
+<img src="/img/patternB.png" alt="input deck into textarea">
 <p class="notation">
 ※サイドボード込みの場合は、"Sideboard"という一行で区切って下さい。</p>
 <form action="/upload_decklist" method="post" accept-charset="UTF-8">

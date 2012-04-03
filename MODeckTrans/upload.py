@@ -70,7 +70,6 @@ class upload_decklist(webapp.RequestHandler):
         self.response.out.write(template.render(path, template_values))
 
 
-
 class Whatis(webapp.RequestHandler):
     def get(self):
         template_value = {}
@@ -90,7 +89,7 @@ application = webapp.WSGIApplication(
      ('/upload_decklist',upload_decklist),
      ('/whatsthis',Whatis),
      ('/changelog',ChangeLog)],
-    debug=True)
+    debug=False)
 
 def main():
     run_wsgi_app(application)

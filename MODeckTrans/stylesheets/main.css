@@ -53,7 +53,7 @@ body {
    background-position: center top;
 }
 
-#site_navi li a{
+#site_navi a{
     width: 140px;
     height: 69px;
     line-height: 68px;
@@ -67,7 +67,7 @@ body {
     background-position: center bottom;
 }
 
-#site_navi li a:hover{
+#site_navi a:hover{
    background-position: center top;
 }
 #site_navi a:visited{
